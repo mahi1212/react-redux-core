@@ -9,7 +9,7 @@ const Home = () => {
       .then(res => res.json())
       .then(data => setProducts(data))
   }, [])
-  console.log(products)
+  // console.log(products)
 
   const state = useSelector((state) => state)
   console.log(state)

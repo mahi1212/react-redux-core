@@ -14,6 +14,16 @@ const ProductCard = ({ product }) => {
       className='shadow-lg rounded-3xl border  p-3 flex flex-col text-indigo-900'
       key={product._id}
     >
+      <div className="relative">
+        {
+          pathname === '/cart' && (
+            <span className='bg-indigo-500 text-white p-2 rounded-full absolute top-0 right-1'>
+              {product.quantity}
+            </span>
+          )
+        }
+
+      </div>
       <div className='h-52 w-52 mx-auto'>
         <img src={product.image} alt={product.model} />
       </div>
